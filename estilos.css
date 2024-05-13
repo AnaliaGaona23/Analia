@@ -1,0 +1,681 @@
+body{
+margin: 0;
+padding: 0;
+background-color: black;
+font-family:'Rubik', sans-serif ;
+overflow-x: hidden;
+
+}
+
+
+/* Estilos del menú */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Espacio entre cada elemento del menú */
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500; /* Semibold */
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Estilos del encabezado */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 50px;
+    
+
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-family: 'Rubik', sans-serif;
+    font-weight:250;
+    font-size: 45px;
+}
+
+.subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.main-nav {
+    margin-right: auto; /* Mueve el menú principal al extremo derecho */
+    margin-top: 150px;
+    
+    
+}
+
+.main-nav ul li a{
+font-size: 20px;
+}
+
+
+.social-nav {
+    display: flex;
+    margin-right: 20px;
+    
+}
+
+.social-nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0; /* Eliminar el margen para evitar espacios innecesarios */
+}
+
+.social-nav ul li  {
+    margin-left: 20px; /* Espacio entre cada enlace */
+}
+
+
+
+/* SECTION PROYECTO  */
+
+#proyectos {
+    background-color: #00000000; /* Color de fondo para la sección */
+    padding: 50px 20px; /* Espaciado interno */
+    margin-top: 250px;
+    align-items: center;
+}
+
+#proyectos h2 {
+    text-align: left; /* Centrar el título */
+    font-weight: 300;
+    font-size: 40px; /* Ajustar tamaño de fuente */
+    padding: 10px;
+    color: #fff;
+    margin-top: 200px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.project {
+    position: relative; /* Permite posicionar de manera absoluta el texto */
+    background-color: #ffffff00; /* Color de fondo del contenedor */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Borde redondeado */
+    overflow: hidden; /* Oculta el contenido que desborde del contenedor */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+/* Agrega una clase para la animación cuando la sección está en el viewport */
+.animate-on-scroll .project {
+    opacity: 0; /* Inicialmente, los proyectos son transparentes */
+    transition: opacity 2s ease; /* Transición suave de opacidad */
+}
+
+/* Cambia la opacidad a 1 cuando los proyectos están en la vista */
+.animate-on-scroll .project.in-view {
+    opacity: 1;
+}
+
+/* Mantenemos el color de fondo al hacer hover */
+.project:hover {
+    background-color: rgba(35, 9, 185, 0.114);
+}
+
+
+.project:hover {
+    background-color: rgba(35, 9, 185, 0.114); /* Cambia el color de fondo al hacer hover */
+}
+
+.project img {
+    width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+    height: auto; /* Altura automática */
+    border-radius: 5px; /* Borde redondeado para la imagen */
+}
+
+.project p {
+    position: absolute; /* Posiciona el texto de manera absoluta */
+    bottom: 8px; /* Lo posiciona en el borde inferior del contenedor */
+    left: 10px; /* Lo posiciona en el borde izquierdo */
+    color: #ffffffbb;
+    background-color: rgb(0, 0, 0); /* Fondo semitransparente para que el texto sea legible */
+    padding: 5px; /* Espaciado interno del texto */
+    border-radius: 5px; /* Borde redondeado para el texto */
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+}
+
+
+
+#sobremi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#sobremi h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    margin-top: 20px;
+}
+
+.profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+    object-fit: cover; /* Ajusta la imagen para que llene el contenedor manteniendo su relación de aspecto */
+}
+
+#sobremi div {
+    margin-top: 20px;
+}
+
+#sobremi h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#sobremi p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Estilos del pop-up */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+}
+
+.popup-content {
+    position: relative;
+    width: 800px; /* Ancho máximo del pop-up */
+    height: 600px; /* Altura automática para adaptarse al contenido */
+    padding: 20px; /* Añade espacio interno para el contenido */
+    background-color: #ffffff; /* Fondo blanco para el pop-up */
+    border-radius: 10px; /* Borde redondeado */
+    text-align: center; /* Alinea el contenido al centro */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos al comienzo del eje transversal (izquierda) */
+}
+
+.popup-content .image-grid {
+    display: grid; /* Cambiamos a grid layout */
+    grid-template-columns: repeat(2, fr); /* Dos columnas con tamaño igual */
+    grid-gap: 20px; /* Espacio entre las imágenes */
+    overflow: auto; /* Agregamos scroll si es necesario */
+    max-height: 500px; /* Altura máxima para evitar desbordamiento */
+}
+
+.popup-content .image-grid .image-container {
+    width: 80%; /* Ancho máximo para las imágenes */
+    height: auto; /* Altura automática */
+}
+
+.popup-content .image-grid .image-container img {
+    width: 80%; /* Utiliza todo el espacio disponible dentro del contenedor */
+    height: auto; /* Mantiene la relación de aspecto original de las imágenes */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+    padding: 25px;
+}
+
+.popup-content .image-grid .image-container img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al hacer hover */
+}
+
+
+/* Estilos para el botón de cerrar */
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000; /* Cambia el color del botón de cerrar */
+    font-size: 20px; /* Tamaño del botón de cerrar */
+    cursor: pointer;
+}
+
+/* Media query para estilos en desktop */
+@media screen and (min-width: 768px) {
+    .project .popup-content {
+        display: none; /* Ocultar el contenido del popup por defecto en desktop */
+    }
+
+    .project.active .popup-content {
+        display: block; /* Mostrar el contenido del popup al hacer clic en desktop */
+    }
+}
+
+
+
+
+
+
+
+.project-description {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left; /* Alinea el contenido a la izquierda */
+    
+}
+
+.project-description h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  text-align: left;
+}
+
+.project-description p {
+    font-size: 1em;
+    color: #666;
+    text-align: left;
+}
+
+
+
+.icon-space {
+    margin-top: 10px;
+}
+
+.icon-space .icon {
+    max-width: 50px; /* Tamaño deseado para los iconos */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10px; /* Espacio entre los iconos */
+    align-items: left
+    ;
+}
+
+
+
+
+
+
+
+/* FILTRO  */
+
+.filtros {
+    text-align: left; /* Alinea los botones al centro */
+    margin-top: 10px; /* Espacio superior */
+    padding: 15px;
+}
+
+.filtro {
+    background-color: #53aaf5; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 0 5px; /* Margen entre botones */
+    cursor: pointer; /* Cursor apuntador */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.filtro:hover {
+    background-color: #1d6cad; /* Color de fondo al hacer hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo del objeto generado por puntos */
+
+#textoanimacion {
+    position: relative; /* Cambiado a relative para que #punto2 sea relativo a este div */
+    height: 100px; /* Ajusta la altura según sea necesario */
+    /* Agrega cualquier otro estilo que tengas aquí */
+}
+
+#punto2 {
+    position: absolute;
+    width: 255px;
+    height: 275px;
+    border-radius: 50%; /* Cambiado a 50% para que sea un círculo */
+    background-color: rgba(0, 0, 255, 0); /* Cambiado a color azul */
+    animation: mover2 6s ease-in-out infinite alternate; /* Modificada la animación */
+    z-index: -1; /* Para que esté detrás del texto */
+    top: 10%; /* Posición vertical centrada */
+    left: 0; /* Posición horizontal izquierda */
+    transform: translate(0, -50%); /* Centra verticalmente */
+    opacity: 0.4; /* Reducir opacidad para que el texto sea más visible */
+}
+
+#textoanimacion h2 {
+    position: relative; /* Asegura que el texto esté por encima del punto */
+    z-index: 1; /* Coloca el texto por encima del punto */
+    color: white; /* Cambia el color del texto si es necesario */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 20px; /* Espacio entre el punto y el texto */
+}
+
+@keyframes mover2 {
+    0% {
+        opacity: 0.6; /* Baja la intensidad de la luz */
+        transform: translateX(-50%) rotate(0deg); /* Inicia en su posición normal */
+        box-shadow: 0 0 10px rgba(12, 8, 243, 0.7); /* Efecto de ondas */
+    }
+    100% {
+        opacity: 0.8; /* Aumenta la intensidad de la luz */
+        transform: translateX(-50%) rotate(360deg); /* Gira en sentido horario */
+        box-shadow: 0 0 10px rgba(9, 194, 215, 0.7); /* Efecto de ondas */
+    }
+}
+
+
+#punto3 {
+    position: absolute;
+    width: 265px;
+    height: 275px;  
+    border-radius: 50%; /* Cambiado a 50% para que sea un círculo */
+    background-color: rgba(0, 0, 255, 0); /* Cambiado a color azul */
+    animation: mover3 6s ease-in-out infinite alternate; /* Modificada la animación */
+    z-index: -1; /* Para que esté detrás del texto */
+    top: 10%; /* Posición vertical centrada */
+    left: 0; /* Posición horizontal izquierda */
+    transform: translate(0, -50%); /* Centra verticalmente */
+    opacity: 0.4; /* Reducir opacidad para que el texto sea más visible */
+}
+
+
+@keyframes mover3 {
+    0% {
+        opacity: 0.6; /* Baja la intensidad de la luz */
+        transform: translateX(-50%) rotate(0deg); /* Inicia en su posición normal */
+        box-shadow: 0 0 10px rgba(228, 10, 239, 0.7); /* Efecto de ondas */
+    }
+    100% {
+        opacity: 0.8; /* Aumenta la intensidad de la luz */
+        transform: translateX(-50%) rotate(360deg); /* Gira en sentido horario */
+        box-shadow: 0 0 10px rgba(205, 87, 226, 0.7); /* Efecto de ondas */
+    }
+}
+
+
+
+
+
+#punto4 {
+    position: absolute;
+    width: 265px;
+    height: 275px;  
+    border-radius: 50%; /* Cambiado a 50% para que sea un círculo */
+    background-color: rgba(0, 0, 255, 0); /* Cambiado a color azul */
+    animation: mover3 6s ease-in-out infinite alternate; /* Modificada la animación */
+    z-index: -1; /* Para que esté detrás del texto */
+    top: 10%; /* Posición vertical centrada */
+    left: 0; /* Posición horizontal izquierda */
+    transform: translate(0, -50%); /* Centra verticalmente */
+    opacity: 0.4; /* Reducir opacidad para que el texto sea más visible */
+}
+
+
+@keyframes mover3 {
+    0% {
+        opacity: 0.6; /* Baja la intensidad de la luz */
+        transform: translateX(-50%) rotate(0deg); /* Inicia en su posición normal */
+        box-shadow: 0 0 10px rgba(10, 71, 239, 0.7); /* Efecto de ondas */
+    }
+    100% {
+        opacity: 0.8; /* Aumenta la intensidad de la luz */
+        transform: translateX(-50%) rotate(360deg); /* Gira en sentido horario */
+        box-shadow: 0 0 10px rgba(213, 153, 224, 0.7); /* Efecto de ondas */
+    }
+}
+
+
+
+
+
+
+
+#punto{
+    display: inline-block;
+    position: absolute;
+    width: 2500px;
+    height: 2500px;
+    opacity: 0.4;
+    border-radius: 120%;
+    animation: mover 25s cubic-bezier(0.4, 0.5, 0.2, 1) infinite; /* Animación más lenta */
+    z-index: -1;
+}
+
+
+/* Animación del objeto generado por puntos */
+@keyframes mover {
+    0% {
+        transform: translateX(0) translateY(0);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0.7); /* Sin sombra */
+    }
+    25% {
+        transform: translateX(700px) translateY(50px);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Efecto de ondas */
+    }
+    50% {
+        transform: translateX(100px) translateY(0);
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.7); /* Efecto de ondas */
+    }
+    75% {
+        transform: translateX(50px) translateY(-50px);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Efecto de ondas */
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0.7); /* Sin sombra */
+    }
+}
+
+
+
+
+footer {
+    background-color: #0000002d; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del contenido */
+}
+
+
+footer h2{
+    font-weight: 200;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-icons {
+    margin-top: 10px;
+}
+
+.contact-icons a {
+    color: #fff; /* Color de los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espaciado entre los iconos */
+}
+
+.contact-icons a:hover {
+    color: #ccc; /* Color de los iconos al hacer hover */
+}
+
+
+
+
+/* MOBILE */ 
+/* header */
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .main-nav {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        text-align: left; /* Alinea el texto del logo a la izquierda */
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        text-align: left; /* Alinea el subtítulo a la izquierda */
+    }
+
+    .social-nav {
+        display: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .social-nav ul {
+        padding-left: 0; /* Elimina el relleno izquierdo en la lista de redes sociales */
+    }
+
+    .social-nav ul li  {
+        margin-left: 10px; /* Reducir el espacio entre cada enlace */
+    }
+}
+
+/* FILTROS */
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .filtros {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los botones se envuelvan en múltiples líneas */
+        justify-content: flex-start; /* Alinea los botones a la izquierda */
+        gap: 5px; /* Espacio entre los botones */
+    }
+
+    .filtro {
+        flex: 0 0 calc(50% - 5px); /* Los botones ocupan el 50% del ancho menos el espacio entre ellos */
+        padding: 10px; /* Añade un padding adecuado */
+        text-align: center; /* Centra el texto dentro de los botones */
+    }
+
+
+    #proyectos {
+    
+        margin-top: 100px;
+       
+    }
+}
+
+/* POPUP */
+/* Media query para estilos en dispositivos móviles */
+@media screen and (max-width: 767px) {
+    .project .popup-content {
+        display: none; /* Ocultar el contenido del popup por defecto en dispositivos móviles */
+    }
+    .project.active .popup-content {
+        display: block; /* Mostrar el contenido del popup al hacer clic en desktop */
+    }
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+   
+}
+}
+
+/* Media query para estilos en desktop */
+@media screen and (min-width: 768px) {
+    .project .popup-content {
+        display: none; /* Ocultar el contenido del popup por defecto en desktop */
+    }
+
+    .project.active .popup-content {
+        display: block; /* Mostrar el contenido del popup al hacer clic en desktop */
+      
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos móviles */
+        gap: 10px;
+    }
+
+    .project {
+        width: calc(100% - 10px); /* Ancho del proyecto en dispositivos móviles (50% del contenedor con espacio entre ellos) */
+    }
+
+    
+}
+@media screen and (max-width: 768px) {
+    #punto {
+        width: 100px; /* Ajusta el ancho del punto para dispositivos móviles */
+        height: 100px; /* Ajusta la altura del punto para dispositivos móviles */
+        animation-duration: 15s; /* Reduce la duración de la animación para dispositivos móviles */
+    }
+}
+
