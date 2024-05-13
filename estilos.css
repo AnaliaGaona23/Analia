@@ -182,8 +182,8 @@ font-size: 20px;
 }
 
 #sobremi h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 40px; /* Ajustar tamaño de fuente */
 }
 
 .profile-picture {
@@ -202,7 +202,7 @@ font-size: 20px;
 }
 
 #sobremi h3 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -210,6 +210,10 @@ font-size: 20px;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 10px;
+}
+
+.textosobremi{
+    width: 450px;
 }
 
 
@@ -675,7 +679,7 @@ font-size: 14px;
 @media screen and (max-width: 767px) {
     .grid {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos móviles */
-        gap: 10px;
+        gap: 15px;
     }
 
     .project {
