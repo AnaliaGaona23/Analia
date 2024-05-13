@@ -644,6 +644,19 @@ footer h2{
     z-index: 9999;
    
 }
+
+.project-description h3{ 
+font-size: 14px;
+}
+
+.project-description p{ 
+    font-size: 8px;
+    }
+
+.icon-space img{
+    width: 15px;
+}
+
 }
 
 /* Media query para estilos en desktop */
