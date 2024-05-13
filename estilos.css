@@ -191,8 +191,8 @@ font-size: 20px;
 }
 
 .profile-picture img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
     object-fit: cover; /* Ajusta la imagen para que llene el contenedor manteniendo su relación de aspecto */
 }
