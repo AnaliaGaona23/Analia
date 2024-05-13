@@ -679,7 +679,7 @@ font-size: 14px;
 @media screen and (max-width: 767px) {
     .grid {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos móviles */
-        gap: 15px;
+        gap: 20px;
     }
 
     .project {
@@ -694,5 +694,11 @@ font-size: 14px;
         height: 100px; /* Ajusta la altura del punto para dispositivos móviles */
         animation-duration: 15s; /* Reduce la duración de la animación para dispositivos móviles */
     }
+
+    .textosobremi{
+        width: 350px;
+    }
+    
 }
+
 
